@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work — F&amp;F (Form &amp; Founder)</title>
+    <meta name="description"
+        content="A curation of selected brand identities, custom web platforms, and publishing projects created by Form & Founder.">
+    <link rel="icon" type="image/png" href="Images/F & F.png">
+
+    <!-- Google Fonts for Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ff-primary': '#432D3B',     /* Founder — aubergine */
+                        'ff-secondary': '#F2EEE6',   /* Canvas — ivory */
+                        'ff-accent': '#B8755F',      /* Matter — copper */
+                        'ff-tertiary': '#899A91',    /* Form — sage */
+                        'ff-ink': '#211D1E',         /* Ink — body copy */
+                        'ff-canvas-soft': '#EAE4D9',
+                        'ff-canvas-pure': '#FAF7F2',
+                        'ff-aubergine-deep': '#32212C',
+                        'ff-aubergine-light': '#53394A',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'Georgia', 'serif'],
+                        sans: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                        fraunces: ['Fraunces', 'Georgia', 'serif'],
+                        brandon: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS & Font Definitions -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Client interactions -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-ff-secondary text-ff-ink font-brandon antialiased selection:bg-ff-accent selection:text-ff-secondary">
+
+    <!-- Header Navigation -->
+    <header id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-ff-secondary/80 backdrop-blur-md transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+            <!-- Brand Mark -->
+            <a href="index.html" class="inline-flex items-center focus:outline-none" aria-label="Form & Founder Home">
+                <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-10 md:h-11 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-9 text-sm uppercase tracking-widest font-medium"
+                aria-label="Primary Navigation">
+                <a href="services.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider btn-primary">
+                    Start a project
+                </a>
+
+                <button id="mobile-menu-toggle" type="button"
+                    class="md:hidden p-2 text-ff-primary hover:text-ff-accent focus:outline-none"
+                    aria-label="Toggle navigation menu" aria-expanded="false">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Drawer -->
+        <div id="mobile-menu"
+            class="md:hidden menu-closed bg-ff-secondary border-b border-ff-tertiary/20 shadow-lg px-6 py-8">
+            <nav class="flex flex-col space-y-5 text-base uppercase tracking-widest font-medium">
+                <a href="services.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Contact</a>
+                <div class="pt-4">
+                    <a href="contact.html"
+                        class="w-full text-center block px-6 py-3 text-xs font-semibold uppercase tracking-wider btn-primary">
+                        Start a project
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero (Ivory) -->
+        <section class="pt-36 pb-16 md:pt-44 md:pb-24 px-6 md:px-10 max-w-7xl mx-auto">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2.5 mb-4">
+                    <span class="w-2 h-2 rounded-full bg-ff-accent"></span>
+                    <span class="text-xs uppercase tracking-[0.14em] text-ff-primary font-semibold">Portfolio &amp; Case
+                        Studies</span>
+                </div>
+                <h1
+                    class="text-5xl sm:text-6xl md:text-7xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.04] tracking-tight mb-6">
+                    A few things we've <span class="italic text-ff-accent font-serif">built.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-ff-ink font-normal leading-relaxed">
+                    Thoughtful collaborations with founders who care about craft, clarity, and enduring value.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div
+                class="flex flex-wrap gap-2 md:gap-3 mt-12 pt-8 border-t border-ff-tertiary/25 text-xs uppercase tracking-wider">
+                <button
+                    class="work-filter-btn px-5 py-2.5 border border-ff-primary bg-ff-primary text-ff-secondary font-medium transition-all"
+                    data-filter="all">
+                    All Projects
+                </button>
+                <button
+                    class="work-filter-btn px-5 py-2.5 border border-ff-tertiary/50 bg-transparent text-ff-ink hover:border-ff-primary hover:text-ff-primary font-medium transition-all"
+                    data-filter="branding">
+                    Branding
+                </button>
+                <button
+                    class="work-filter-btn px-5 py-2.5 border border-ff-tertiary/50 bg-transparent text-ff-ink hover:border-ff-primary hover:text-ff-primary font-medium transition-all"
+                    data-filter="web-design">
+                    Web Design
+                </button>
+                <button
+                    class="work-filter-btn px-5 py-2.5 border border-ff-tertiary/50 bg-transparent text-ff-ink hover:border-ff-primary hover:text-ff-primary font-medium transition-all"
+                    data-filter="digital-content">
+                    Digital Content
+                </button>
+                <button
+                    class="work-filter-btn px-5 py-2.5 border border-ff-tertiary/50 bg-transparent text-ff-ink hover:border-ff-primary hover:text-ff-primary font-medium transition-all"
+                    data-filter="book-publishing">
+                    Book Publishing
+                </button>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="pb-24 md:pb-32 px-6 md:px-10 max-w-7xl mx-auto">
+            <div id="projects-container" class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+                <!-- Project 1: SMO Technova (Featured) -->
+                <article id="smo-technova" class="work-project-card editorial-card group"
+                    data-category="branding web-design">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/10] mb-6">
+                        <img src="Images/smo-technova.jpg" alt="SMO Technova Brand Identity and Web Design"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-xs text-ff-tertiary uppercase tracking-widest mb-2 font-medium">
+                        <span>Branding &bull; Web Design</span>
+                        <span>Ilorin, Nigeria</span>
+                    </div>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold group-hover:text-ff-accent transition-colors mb-3 leading-[1.12]">
+                        SMO Technova &mdash; Technology Studio Identity &amp; Platform
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-4">
+                        A modern technology studio based in Ilorin, Nigeria required a confident visual identity and
+                        high-performance digital presence to position their engineering capabilities on the global
+                        stage.
+                    </p>
+                    <div
+                        class="flex flex-wrap gap-2 text-xs text-ff-ink/60 font-mono pt-2 border-t border-ff-tertiary/15">
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Brand Identity</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Editorial Web Platform</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Design System</span>
+                    </div>
+                </article>
+
+                <!-- Project 2: From Manuscript to Market (Featured) -->
+                <article id="founders-thesis" class="work-project-card editorial-card group"
+                    data-category="book-publishing digital-content">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/10] mb-6">
+                        <img src="Images/founders-thesis-book.jpg" alt="From Manuscript to Market Book Publishing"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-xs text-ff-tertiary uppercase tracking-widest mb-2 font-medium">
+                        <span>Book Publishing &bull; Editorial</span>
+                        <span>Global Amazon KDP</span>
+                    </div>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold group-hover:text-ff-accent transition-colors mb-3 leading-[1.12]">
+                        The Founder's Thesis &mdash; From Manuscript to Market
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-4">
+                        Complete author packaging for a serial tech entrepreneur. End-to-end service comprising
+                        hardcover &amp; paperback cover design, interior typographical layout, ISBN management, and
+                        Amazon distribution.
+                    </p>
+                    <div
+                        class="flex flex-wrap gap-2 text-xs text-ff-ink/60 font-mono pt-2 border-t border-ff-tertiary/15">
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Cover Design</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Interior Typesetting</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Amazon KDP Setup</span>
+                    </div>
+                </article>
+
+                <!-- Project 3: Aura Living -->
+                <article id="aura-living" class="work-project-card editorial-card group"
+                    data-category="branding digital-content">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/10] mb-6">
+                        <img src="Images/aura-living.jpg" alt="Aura Living Architectural Design Studio"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-xs text-ff-tertiary uppercase tracking-widest mb-2 font-medium">
+                        <span>Branding &bull; Editorial System</span>
+                        <span>London &bull; Lagos</span>
+                    </div>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold group-hover:text-ff-accent transition-colors mb-3 leading-[1.12]">
+                        Aura Living &mdash; Architectural Interior Identity &amp; Lookbook
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-4">
+                        Brand strategy, bespoke wordmark, tactile stationery, and printed architectural portfolio for an
+                        upscale interior practice focused on spatial tranquility and organic minimalism.
+                    </p>
+                    <div
+                        class="flex flex-wrap gap-2 text-xs text-ff-ink/60 font-mono pt-2 border-t border-ff-tertiary/15">
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Identity System</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Editorial Print Lookbook</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Packaging Tokens</span>
+                    </div>
+                </article>
+
+                <!-- Project 4: Nexa Capital -->
+                <article id="nexa-capital" class="work-project-card editorial-card group"
+                    data-category="web-design digital-content">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/10] mb-6">
+                        <img src="Images/nexa-capital.jpg" alt="Nexa Capital Venture Platform"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-xs text-ff-tertiary uppercase tracking-widest mb-2 font-medium">
+                        <span>Web Design &bull; Digital Content</span>
+                        <span>Venture Studio</span>
+                    </div>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold group-hover:text-ff-accent transition-colors mb-3 leading-[1.12]">
+                        Nexa Capital &mdash; Venture Fund Editorial Web Experience
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-4">
+                        A bespoke digital publication and web home for an early-stage fund investing in African and
+                        European founders. Focused on readable long-form founder essays and quarterly reports.
+                    </p>
+                    <div
+                        class="flex flex-wrap gap-2 text-xs text-ff-ink/60 font-mono pt-2 border-t border-ff-tertiary/15">
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Custom Web Platform</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Investor Dashboard UI</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Quarterly Essays</span>
+                    </div>
+                </article>
+
+                <!-- Project 5: Kore Skincare -->
+                <article id="kore-skincare" class="work-project-card editorial-card group"
+                    data-category="branding digital-content">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/10] mb-6">
+                        <img src="Images/kore-skincare.jpg" alt="Kore Skincare Botanical Brand Packaging"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div
+                        class="flex items-center justify-between text-xs text-ff-tertiary uppercase tracking-widest mb-2 font-medium">
+                        <span>Branding &bull; Packaging</span>
+                        <span>Artisanal Wellness</span>
+                    </div>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold group-hover:text-ff-accent transition-colors mb-3 leading-[1.12]">
+                        Kore Botanics &mdash; Organic Wellness Packaging &amp; Narrative
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-4">
+                        Brand strategy, label typography, amber bottle packaging suite, and launch storytelling for an
+                        ethical botanical skincare founder.
+                    </p>
+                    <div
+                        class="flex flex-wrap gap-2 text-xs text-ff-ink/60 font-mono pt-2 border-t border-ff-tertiary/15">
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Packaging Design</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Label Typography</span>
+                        <span class="bg-ff-canvas-soft px-2.5 py-1">Launch Campaign</span>
+                    </div>
+                </article>
+
+                <!-- Project 6: More Work Coming Soon (Editorial Studio Note) -->
+                <div class="work-project-card bg-ff-canvas-soft/80 border border-dashed border-ff-tertiary/40 p-8 md:p-12 flex flex-col justify-center text-center"
+                    data-category="all branding web-design digital-content book-publishing">
+                    <span class="editorial-tag text-ff-accent block mb-3">In Production</span>
+                    <h2
+                        class="text-2xl md:text-3xl font-fraunces text-ff-primary font-medium md:font-semibold mb-4 leading-[1.12]">
+                        More work coming soon.</h2>
+                    <p class="text-sm md:text-base text-ff-ink/70 font-light leading-relaxed max-w-md mx-auto mb-6">
+                        We deliberately limit our active client roster to three founder commissions per quarter to
+                        ensure rigorous attention to craft.
+                    </p>
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-medium btn-secondary px-6 py-3 self-center">
+                        Reserve upcoming studio slot &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Founder Testimonial Pullout (Aubergine Section) -->
+        <section class="bg-ff-primary text-ff-secondary py-24 md:py-32 px-6 md:px-10 bg-aubergine-grid">
+            <div class="max-w-4xl mx-auto text-center">
+                <span
+                    class="text-xs uppercase tracking-[0.14em] text-ff-secondary/80 font-semibold block mb-4">Founder's
+                    Note</span>
+                <blockquote
+                    class="text-2xl sm:text-3xl md:text-4xl font-fraunces font-medium leading-[1.25] text-ff-secondary mb-8">
+                    &ldquo;Every founder I work with is carrying something fragile — an idea they believe in, before
+                    the
+                    world has decided whether to believe in it too. My job isn't to decorate that idea. It's to give it
+                    a
+                    form strong enough to survive contact with reality.&rdquo;
+                </blockquote>
+                <div class="flex flex-col items-center">
+                    <span class="font-medium text-sm text-ff-secondary tracking-wide">Founder &amp; Managing
+                        Director</span>
+                    <span class="text-xs text-ff-secondary/80 uppercase tracking-widest mt-1">Oukodo Maryam</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 px-6 md:px-10 text-center max-w-4xl mx-auto">
+            <h2
+                class="text-3xl md:text-4xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-4">
+                Have a project in mind?</h2>
+            <p class="text-base text-ff-ink/75 font-light mb-8 max-w-lg mx-auto leading-relaxed">
+                Whether you need a full rebrand, custom web development, or complete book publishing support, let's
+                explore how we can collaborate.
+            </p>
+            <a href="contact.html"
+                class="px-8 py-4 text-xs md:text-sm font-medium uppercase tracking-widest btn-primary inline-block">
+                Start a project with F&amp;F &rarr;
+            </a>
+        </section>
+    </main>
+
+    <!-- Studio Footer -->
+    <footer class="bg-ff-secondary text-ff-ink border-t border-ff-tertiary/30 pt-20 pb-12 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-ff-tertiary/20">
+                <!-- Studio Wordmark & Summary -->
+                <div class="md:col-span-5 space-y-6">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-base text-ff-primary font-light leading-relaxed max-w-sm">
+                        A creative studio for founders and growing businesses. Crafting brand identity systems, bespoke
+                        editorial websites, digital narratives, and turnkey book publishing.
+                    </p>
+                    <div class="text-xs text-ff-ink/60 font-mono">
+                        LOCATION: ILORIN &bull; LAGOS &bull; GLOBAL REMOTE
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-3 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Navigation</span>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Home</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-ff-ink/75 hover:text-ff-accent transition-colors">Services</a></li>
+                        <li><a href="work.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Work &amp;
+                                Case Studies</a></li>
+                        <li><a href="about.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">About the
+                                Studio</a></li>
+                        <li><a href="contact.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Contact
+                                / Inquiries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Practices</span>
+                    <ul class="space-y-2.5 text-sm text-ff-ink/75">
+                        <li><a href="services.html#branding" class="hover:text-ff-accent transition-colors">Branding</a>
+                        </li>
+                        <li><a href="services.html#web-design" class="hover:text-ff-accent transition-colors">Web
+                                Design</a></li>
+                        <li><a href="services.html#digital-content"
+                                class="hover:text-ff-accent transition-colors">Digital Content</a></li>
+                        <li><a href="services.html#book-publishing" class="hover:text-ff-accent transition-colors">Book
+                                Publishing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Inquiries -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Inquiries</span>
+                    <p class="text-sm text-ff-ink/70 leading-relaxed">
+                        Ready to start a conversation about your next project?
+                    </p>
+                    <a href="mailto:hello@formandfounder.com"
+                        class="text-sm md:text-xs font-medium text-ff-accent hover:underline block break-all">
+                        hello@formandfounder.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ff-ink/60 gap-4">
+                <div>
+                    &copy; 2026 F&amp;F (Form &amp; Founder). All rights reserved.
+                </div>
+                <div class="font-serif italic text-ff-primary">
+                    Where ideas take form.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

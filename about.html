@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — F&amp;F (Form &amp; Founder)</title>
+    <meta name="description"
+        content="F&F was born from experience — building brands, shipping websites, and learning firsthand what founders actually need from a creative partner. Less noise, more form.">
+    <link rel="icon" type="image/png" href="Images/F & F.png">
+
+    <!-- Google Fonts for Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ff-primary': '#432D3B',     /* Founder — aubergine */
+                        'ff-secondary': '#F2EEE6',   /* Canvas — ivory */
+                        'ff-accent': '#B8755F',      /* Matter — copper */
+                        'ff-tertiary': '#899A91',    /* Form — sage */
+                        'ff-ink': '#211D1E',         /* Ink — body copy */
+                        'ff-canvas-soft': '#EAE4D9',
+                        'ff-canvas-pure': '#FAF7F2',
+                        'ff-aubergine-deep': '#32212C',
+                        'ff-aubergine-light': '#53394A',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'Georgia', 'serif'],
+                        sans: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                        fraunces: ['Fraunces', 'Georgia', 'serif'],
+                        brandon: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS & Font Definitions -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Client interactions -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-ff-secondary text-ff-ink font-brandon antialiased selection:bg-ff-accent selection:text-ff-secondary">
+
+    <!-- Header Navigation -->
+    <header id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-ff-secondary/80 backdrop-blur-md transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+            <!-- Brand Mark -->
+            <a href="index.html" class="inline-flex items-center focus:outline-none" aria-label="Form & Founder Home">
+                <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-10 md:h-11 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-9 text-sm uppercase tracking-widest font-medium"
+                aria-label="Primary Navigation">
+                <a href="services.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider btn-primary">
+                    Start a project
+                </a>
+
+                <button id="mobile-menu-toggle" type="button"
+                    class="md:hidden p-2 text-ff-primary hover:text-ff-accent focus:outline-none"
+                    aria-label="Toggle navigation menu" aria-expanded="false">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Drawer -->
+        <div id="mobile-menu"
+            class="md:hidden menu-closed bg-ff-secondary border-b border-ff-tertiary/20 shadow-lg px-6 py-8">
+            <nav class="flex flex-col space-y-5 text-base uppercase tracking-widest font-medium">
+                <a href="services.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Contact</a>
+                <div class="pt-4">
+                    <a href="contact.html"
+                        class="w-full text-center block px-6 py-3 text-xs font-semibold uppercase tracking-wider btn-primary">
+                        Start a project
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero (Ivory) -->
+        <section class="pt-36 pb-20 md:pt-44 md:pb-28 px-6 md:px-10 max-w-7xl mx-auto border-b border-ff-tertiary/20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <div class="inline-flex items-center gap-2.5 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-ff-accent"></span>
+                        <span class="text-xs uppercase tracking-[0.14em] text-ff-primary font-semibold">The Studio
+                            Story</span>
+                    </div>
+                    <h1
+                        class="text-5xl sm:text-6xl md:text-7xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.04] tracking-tight mb-8">
+                        Built by a founder, <br>for <span class="italic text-ff-accent font-serif">founders.</span>
+                    </h1>
+                    <div class="space-y-6 text-base md:text-lg text-ff-ink font-normal leading-relaxed">
+                        <p class="font-serif italic text-xl md:text-2xl text-ff-primary leading-snug">
+                            &ldquo;F&amp;F was born from experience &mdash; building brands, shipping websites, and
+                            learning firsthand what founders actually need from a creative partner. We've been on the
+                            other side of the table. That's what shapes how we work now: less noise, more form.&rdquo;
+                        </p>
+                        <p>
+                            We started Form &amp; Founder out of a quiet frustration with the traditional agency model.
+                            Too many creative firms operate as bureaucratic machines: layers of account managers, weeks
+                            spent on abstract slide presentations, and final deliverables that look identical to the
+                            latest Silicon Valley trend.
+                        </p>
+                        <p>
+                            We believe founders deserve a partner who operates with equal intensity, clear conviction,
+                            and direct accountability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="case-study-media border border-ff-tertiary/30 shadow-md">
+                        <img src="Images/studio-workspace.jpg" alt="Form & Founder Creative Workspace"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="mt-3 text-xs text-ff-ink/60 font-mono flex justify-between items-center">
+                        <span>STUDIO TABLE &bull; WORK IN PROGRESS</span>
+                        <span>WHERE FORM BEGINS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Meaning of "Form & Founder" (Aubergine Section) -->
+        <section
+            class="bg-ff-primary text-ff-secondary py-24 md:py-32 px-6 md:px-10 relative overflow-hidden bg-aubergine-grid">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-[0.14em] text-ff-secondary/80 font-semibold block mb-2">Our
+                        Name</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-fraunces font-medium md:font-semibold text-ff-secondary leading-[1.08] mb-6">
+                        Why Form <span class="text-ff-accent font-serif">&amp;</span> Founder?
+                    </h2>
+                    <p class="text-base md:text-lg text-ff-secondary/85 font-normal leading-relaxed">
+                        The name encapsulates the two essential elements required to build an enduring enterprise.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-ff-secondary/20 pt-12">
+                    <div class="space-y-4">
+                        <span class="text-ff-accent font-fraunces text-3xl md:text-4xl block">The Founder</span>
+                        <h3 class="text-xl font-semibold text-ff-secondary">The Vision &amp; Conviction</h3>
+                        <p class="text-sm md:text-base text-ff-secondary/85 font-normal leading-relaxed">
+                            You carry the original insight, the market intuition, and the risk. You see a future that
+                            does not yet exist and possess the drive to bring it into reality.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <span class="text-ff-accent font-fraunces text-3xl md:text-4xl block">The Form</span>
+                        <h3 class="text-xl font-semibold text-ff-secondary">The Expression &amp; Medium</h3>
+                        <p class="text-sm md:text-base text-ff-secondary/85 font-normal leading-relaxed">
+                            Our discipline is extracting that raw vision and shaping it into cohesive typography,
+                            enduring brand identity, editorial web design, and published literature that commands
+                            authority.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio Principles (Ivory Section) -->
+        <section class="py-24 md:py-32 px-6 md:px-10 max-w-7xl mx-auto">
+            <div class="max-w-3xl mb-16">
+                <span class="editorial-tag text-ff-accent block mb-2">Guiding Tenets</span>
+                <h2
+                    class="text-4xl md:text-5xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-4">
+                    Four core principles that shape our work.
+                </h2>
+                <p class="text-base md:text-lg text-ff-ink/75 font-light leading-relaxed">
+                    Standards we hold ourselves to on every engagement.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Principle 1 -->
+                <div class="border border-ff-tertiary/25 p-8 bg-ff-secondary editorial-card">
+                    <span class="font-fraunces text-2xl text-ff-accent block mb-3">01</span>
+                    <h3 class="text-2xl font-fraunces text-ff-primary font-medium md:font-semibold mb-3 leading-[1.15]">
+                        Intentionality over Novelty</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        We don't chase fleeting design fads that look outdated in six months. Every typeface choice,
+                        color value, and layout structure is chosen with deliberate strategic purpose.
+                    </p>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="border border-ff-tertiary/25 p-8 bg-ff-secondary editorial-card">
+                    <span class="font-fraunces text-2xl text-ff-accent block mb-3">02</span>
+                    <h3 class="text-2xl font-fraunces text-ff-primary font-medium md:font-semibold mb-3 leading-[1.15]">
+                        Quiet Confidence over Noise</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        The strongest brands don't need to shout. We favor understated editorial elegance, generous
+                        whitespace, and typography that allows the founder's message to shine.
+                    </p>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="border border-ff-tertiary/25 p-8 bg-ff-secondary editorial-card">
+                    <span class="font-fraunces text-2xl text-ff-accent block mb-3">03</span>
+                    <h3 class="text-2xl font-fraunces text-ff-primary font-medium md:font-semibold mb-3 leading-[1.15]">
+                        Founder Empathy in Action</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Having founded and scaled businesses ourselves, we understand budget realities, launch
+                        deadlines, and the pressure to produce commercial results. We operate with zero ego.
+                    </p>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="border border-ff-tertiary/25 p-8 bg-ff-secondary editorial-card">
+                    <span class="font-fraunces text-2xl text-ff-accent block mb-3">04</span>
+                    <h3 class="text-2xl font-fraunces text-ff-primary font-medium md:font-semibold mb-3 leading-[1.15]">
+                        Enduring Craft</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Whether writing semantic HTML code, setting margins on a printed book page, or kerning a custom
+                        wordmark, we hold our craft to the standard of master typographers and artisans.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Global Reach (Soft Canvas Section) -->
+        <section class="bg-ff-canvas-soft/70 py-20 px-6 md:px-10 border-y border-ff-tertiary/20">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <span class="editorial-tag text-ff-accent block mb-2">Our Geography</span>
+                    <h2
+                        class="text-3xl md:text-4xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-4">
+                        Rooted in Nigeria. <br>Partnering worldwide.
+                    </h2>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Operating from Ilorin and Lagos, we bring a rich, global perspective to founders everywhere. We
+                        collaborate seamlessly across continents and time zones.
+                    </p>
+                </div>
+
+                <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm">
+                    <div class="p-6 bg-ff-secondary border border-ff-tertiary/20">
+                        <span class="text-xs uppercase tracking-widest text-ff-primary font-semibold block mb-1">Hub
+                            01</span>
+                        <div class="font-fraunces text-xl text-ff-accent font-medium">Ilorin</div>
+                        <p class="text-xs text-ff-ink/60 mt-1">Creative Practice &amp; Publishing</p>
+                    </div>
+
+                    <div class="p-6 bg-ff-secondary border border-ff-tertiary/20">
+                        <span class="text-xs uppercase tracking-widest text-ff-primary font-semibold block mb-1">Hub
+                            02</span>
+                        <div class="font-fraunces text-xl text-ff-accent font-medium">Lagos</div>
+                        <p class="text-xs text-ff-ink/60 mt-1">Digital &amp; Venture Partnerships</p>
+                    </div>
+
+                    <div class="p-6 bg-ff-secondary border border-ff-tertiary/20 col-span-2 sm:col-span-1">
+                        <span
+                            class="text-xs uppercase tracking-widest text-ff-primary font-semibold block mb-1">Global</span>
+                        <div class="font-fraunces text-xl text-ff-accent font-medium">Worldwide</div>
+                        <p class="text-xs text-ff-ink/60 mt-1">UK &bull; US &bull; Europe &bull; Africa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action (Aubergine Section) -->
+        <section class="bg-ff-primary text-ff-secondary py-24 md:py-32 px-6 md:px-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-xs uppercase tracking-[0.14em] text-ff-secondary/80 font-semibold block mb-3">Work
+                    With Us</span>
+                <h2
+                    class="text-4xl md:text-5xl font-fraunces font-medium md:font-semibold leading-[1.08] mb-6 text-ff-secondary">
+                    Ready to build something enduring?
+                </h2>
+                <p class="text-base text-ff-secondary/85 font-normal mb-10 max-w-lg mx-auto leading-relaxed">
+                    We welcome conversations with founders at any stage of their journey. Let's discuss your next
+                    chapter.
+                </p>
+                <a href="contact.html"
+                    class="px-8 py-4 text-xs md:text-sm font-medium uppercase tracking-widest btn-accent inline-block">
+                    Start a project &rarr;
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Studio Footer -->
+    <footer class="bg-ff-secondary text-ff-ink border-t border-ff-tertiary/30 pt-20 pb-12 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-ff-tertiary/20">
+                <!-- Studio Wordmark & Summary -->
+                <div class="md:col-span-5 space-y-6">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-base text-ff-primary font-light leading-relaxed max-w-sm">
+                        A creative studio for founders and growing businesses. Crafting brand identity systems, bespoke
+                        editorial websites, digital narratives, and turnkey book publishing.
+                    </p>
+                    <div class="text-xs text-ff-ink/60 font-mono">
+                        LOCATION: ILORIN &bull; LAGOS &bull; GLOBAL REMOTE
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-3 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Navigation</span>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Home</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-ff-ink/75 hover:text-ff-accent transition-colors">Services</a></li>
+                        <li><a href="work.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Work &amp;
+                                Case Studies</a></li>
+                        <li><a href="about.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">About the
+                                Studio</a></li>
+                        <li><a href="contact.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Contact
+                                / Inquiries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Practices</span>
+                    <ul class="space-y-2.5 text-sm text-ff-ink/75">
+                        <li><a href="services.html#branding" class="hover:text-ff-accent transition-colors">Branding</a>
+                        </li>
+                        <li><a href="services.html#web-design" class="hover:text-ff-accent transition-colors">Web
+                                Design</a></li>
+                        <li><a href="services.html#digital-content"
+                                class="hover:text-ff-accent transition-colors">Digital Content</a></li>
+                        <li><a href="services.html#book-publishing" class="hover:text-ff-accent transition-colors">Book
+                                Publishing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Inquiries -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Inquiries</span>
+                    <p class="text-sm text-ff-ink/70 leading-relaxed">
+                        Ready to start a conversation about your next project?
+                    </p>
+                    <a href="mailto:hello@formandfounder.com"
+                        class="text-sm md:text-xs font-medium text-ff-accent hover:underline block break-all">
+                        hello@formandfounder.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ff-ink/60 gap-4">
+                <div>
+                    &copy; 2026 F&amp;F (Form &amp; Founder). All rights reserved.
+                </div>
+                <div class="font-serif italic text-ff-primary">
+                    Where ideas take form.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

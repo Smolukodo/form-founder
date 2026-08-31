@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* ==========================================================================
+   F&F (Form & Founder) — Core Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Local Fonts: Brandon Text (HvDTrial)
+   -------------------------------------------------------------------------- */
+
+/* Thin (100) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Thin.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-ThinItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Light.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-LightItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Regular.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-RegularItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Medium.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-MediumItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Bold.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-BoldItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Black (900) */
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Black.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-BlackItalic.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Also alias 'HvDTrial Brandon Text' to guarantee complete compatibility */
+@font-face {
+    font-family: 'HvDTrial Brandon Text';
+    src: url('../Fonts/HvDTrial_BrandonText-Regular.woff2') format('woff2'),
+        url('../Fonts/HvDTrial_BrandonText-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
+   Root Variables & Base Reset
+   -------------------------------------------------------------------------- */
+:root {
+    --color-ff-primary: #432D3B;
+    /* Founder — aubergine */
+    --color-ff-secondary: #F2EEE6;
+    /* Canvas — ivory */
+    --color-ff-accent: #B8755F;
+    /* Matter — copper */
+    --color-ff-tertiary: #899A91;
+    /* Form — sage */
+    --color-ff-ink: #211D1E;
+    /* Ink — body copy */
+    --color-ff-ink-muted: #575254;
+    --color-ff-canvas-soft: #EAE4D9;
+    --color-ff-canvas-pure: #FAF7F2;
+    --color-ff-aubergine-deep: #32212C;
+    --color-ff-aubergine-light: #53394A;
+    --color-ff-copper-hover: #A3624D;
+
+    --font-serif: 'Fraunces', Georgia, serif;
+    --font-sans: 'Brandon Text', 'HvDTrial Brandon Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-ff-secondary);
+    color: var(--color-ff-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: var(--color-ff-secondary);
+    color: var(--color-ff-ink);
+    font-size: 1.0625rem;
+    /* 17px */
+    line-height: 1.68;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Styles
+   -------------------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+.font-fraunces,
+.editorial-heading {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif !important;
+    font-feature-settings: 'liga' 1, 'dlig' 1, 'opsz' 1;
+    font-optical-sizing: auto;
+}
+
+h1 {
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+}
+
+.font-brandon {
+    font-family: var(--font-sans);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-ff-accent);
+    color: var(--color-ff-secondary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-ff-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D2C9BD;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-ff-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   Editorial Details & Micro-Interactions
+   -------------------------------------------------------------------------- */
+.editorial-lead {
+    font-size: 1.1875rem;
+    /* ~19px */
+    line-height: 1.65;
+    color: var(--color-ff-ink);
+    /* #211D1E AAA contrast */
+    font-weight: 400;
+}
+
+.editorial-tag {
+    font-size: 0.75rem;
+    /* 12px */
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-ff-primary);
+    /* #432D3B Aubergine */
+}
+
+.editorial-divider {
+    height: 1px;
+    background-color: var(--color-ff-tertiary);
+    opacity: 0.35;
+}
+
+/* Subtle Link Underline Animation */
+.link-hover-accent {
+    position: relative;
+    display: inline-block;
+    transition: color 0.25s ease;
+}
+
+.link-hover-accent::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-ff-accent);
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-hover-accent:hover::after {
+    width: 100%;
+}
+
+.link-hover-accent:hover {
+    color: var(--color-ff-accent);
+}
+
+/* Card Hover Lift + Aubergine-Tinted Shadow */
+.editorial-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 3px rgba(67, 45, 59, 0.08), 0 0 0 1px rgba(137, 154, 145, 0.18);
+    padding: 16px 20px 24px;
+}
+
+.editorial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(67, 45, 59, 0.12), 0 0 0 1px rgba(137, 154, 145, 0.22);
+}
+
+/* Button Subtle States */
+.btn-primary {
+    background-color: var(--color-ff-primary);
+    color: var(--color-ff-secondary);
+    border: 1px solid var(--color-ff-primary);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-ff-accent);
+    border-color: var(--color-ff-accent);
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-ff-primary);
+    border: 1px solid var(--color-ff-tertiary);
+    /* #899A91 Sage intentional 1px border */
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-ff-primary);
+    color: var(--color-ff-primary);
+    background-color: rgba(67, 45, 59, 0.05);
+    /* Light aubergine tint */
+}
+
+.btn-accent {
+    background-color: var(--color-ff-accent);
+    color: #FFFFFF;
+    border: 1px solid var(--color-ff-accent);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-accent:hover {
+    background-color: var(--color-ff-copper-hover);
+    border-color: var(--color-ff-copper-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Animations & Reveal States
+   -------------------------------------------------------------------------- */
+.reveal-init {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Mobile Nav Menu Transitions
+   -------------------------------------------------------------------------- */
+#mobile-menu {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, visibility 0.35s;
+}
+
+#mobile-menu.menu-closed {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu.menu-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    max-height: 500px;
+    /* or a value comfortably larger than the menu's actual content height */
+    overflow: visible;
+}
+
+/* --------------------------------------------------------------------------
+   Aspect ratio & Media styling
+   -------------------------------------------------------------------------- */
+.case-study-media {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-ff-canvas-soft);
+}
+
+.case-study-media img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover .case-study-media img {
+    transform: scale(1.03);
+}
+
+/* Subtle pattern for texture */
+.bg-subtle-grid {
+    background-size: 32px 32px;
+    background-image:
+        linear-gradient(to right, rgba(137, 154, 145, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(137, 154, 145, 0.08) 1px, transparent 1px);
+}
+
+.bg-aubergine-grid {
+    background-size: 36px 36px;
+    background-image:
+        linear-gradient(to right, rgba(242, 238, 230, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(242, 238, 230, 0.04) 1px, transparent 1px);
+}

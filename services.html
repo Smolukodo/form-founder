@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — F&amp;F (Form &amp; Founder)</title>
+    <meta name="description"
+        content="Disciplined creative services for founders: Branding, Web Design, Digital Content, and Book Publishing. Built with intention and editorial craft.">
+    <link rel="icon" type="image/png" href="Images/F & F.png">
+
+    <!-- Google Fonts for Fraunces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ff-primary': '#432D3B',     /* Founder — aubergine */
+                        'ff-secondary': '#F2EEE6',   /* Canvas — ivory */
+                        'ff-accent': '#B8755F',      /* Matter — copper */
+                        'ff-tertiary': '#899A91',    /* Form — sage */
+                        'ff-ink': '#211D1E',         /* Ink — body copy */
+                        'ff-canvas-soft': '#EAE4D9',
+                        'ff-canvas-pure': '#FAF7F2',
+                        'ff-aubergine-deep': '#32212C',
+                        'ff-aubergine-light': '#53394A',
+                    },
+                    fontFamily: {
+                        serif: ['Fraunces', 'Georgia', 'serif'],
+                        sans: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                        fraunces: ['Fraunces', 'Georgia', 'serif'],
+                        brandon: ['Brandon Text', 'HvDTrial Brandon Text', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS & Font Definitions -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Client interactions -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="bg-ff-secondary text-ff-ink font-brandon antialiased selection:bg-ff-accent selection:text-ff-secondary">
+
+    <!-- Header Navigation -->
+    <header id="site-header"
+        class="fixed top-0 left-0 right-0 z-50 bg-ff-secondary/80 backdrop-blur-md transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+            <!-- Brand Mark -->
+            <a href="index.html" class="inline-flex items-center focus:outline-none" aria-label="Form & Founder Home">
+                <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-10 md:h-11 w-auto object-contain">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-9 text-sm uppercase tracking-widest font-medium"
+                aria-label="Primary Navigation">
+                <a href="services.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink/80 hover:text-ff-accent transition-colors link-hover-accent py-1">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="contact.html"
+                    class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider btn-primary">
+                    Start a project
+                </a>
+
+                <button id="mobile-menu-toggle" type="button"
+                    class="md:hidden p-2 text-ff-primary hover:text-ff-accent focus:outline-none"
+                    aria-label="Toggle navigation menu" aria-expanded="false">
+                    <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Drawer -->
+        <div id="mobile-menu"
+            class="md:hidden menu-closed bg-ff-secondary border-b border-ff-tertiary/20 shadow-lg px-6 py-8">
+            <nav class="flex flex-col space-y-5 text-base uppercase tracking-widest font-medium">
+                <a href="services.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Services</a>
+                <a href="work.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Work</a>
+                <a href="about.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">About</a>
+                <a href="contact.html"
+                    class="nav-link text-ff-ink hover:text-ff-accent py-2 border-b border-ff-tertiary/10">Contact</a>
+                <div class="pt-4">
+                    <a href="contact.html"
+                        class="w-full text-center block px-6 py-3 text-xs font-semibold uppercase tracking-wider btn-primary">
+                        Start a project
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero (Ivory) -->
+        <section class="pt-36 pb-20 md:pt-44 md:pb-28 px-6 md:px-10 max-w-7xl mx-auto border-b border-ff-tertiary/20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2.5 mb-4">
+                    <span class="w-2 h-2 rounded-full bg-ff-accent"></span>
+                    <span class="text-xs uppercase tracking-[0.14em] text-ff-primary font-semibold">Disciplines &amp;
+                        Capabilities</span>
+                </div>
+                <h1
+                    class="text-5xl sm:text-6xl md:text-7xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.04] tracking-tight mb-8">
+                    Crafted with purpose. <br>Built for <span class="italic text-ff-accent font-serif">founders.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-ff-ink font-normal leading-relaxed max-w-2xl">
+                    We partner with ambitious founders to translate strategic intent into unmistakable physical and
+                    digital form. Four focused practices, each executed with rigorous editorial precision.
+                </p>
+            </div>
+
+            <!-- Quick Navigation Pills -->
+            <div
+                class="flex flex-wrap gap-3 mt-12 pt-8 border-t border-ff-tertiary/20 text-xs uppercase tracking-wider">
+                <a href="#branding"
+                    class="px-4 py-2 border border-ff-tertiary/40 hover:border-ff-primary hover:text-ff-primary transition-colors bg-ff-secondary font-medium">
+                    01. Branding &amp; Identity
+                </a>
+                <a href="#web-design"
+                    class="px-4 py-2 border border-ff-tertiary/40 hover:border-ff-primary hover:text-ff-primary transition-colors bg-ff-secondary font-medium">
+                    02. Web Design &amp; Digital
+                </a>
+                <a href="#digital-content"
+                    class="px-4 py-2 border border-ff-tertiary/40 hover:border-ff-primary hover:text-ff-primary transition-colors bg-ff-secondary font-medium">
+                    03. Digital Content
+                </a>
+                <a href="#book-publishing"
+                    class="px-4 py-2 border border-ff-tertiary/40 hover:border-ff-primary hover:text-ff-primary transition-colors bg-ff-secondary font-medium">
+                    04. Book Publishing
+                </a>
+            </div>
+        </section>
+
+        <!-- Service 01: Branding (Ivory Section) -->
+        <section id="branding" class="py-24 md:py-32 px-6 md:px-10 max-w-7xl mx-auto scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <span class="text-xs uppercase tracking-widest text-ff-primary font-bold block mb-3">Practice 01
+                        &bull; Identity</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-6">
+                        Branding</h2>
+                    <p class="text-xl font-serif italic text-ff-ink mb-6 leading-snug">
+                        &ldquo;Your business, given form. We build brand strategy, identity systems, and visual language
+                        that make founders instantly recognizable &mdash; and hard to forget.&rdquo;
+                    </p>
+                    <p class="text-sm md:text-base text-ff-ink font-light leading-relaxed mb-8">
+                        Great brand identity is not a cosmetic skin; it is the strategic distillation of your purpose.
+                        We work closely with founders to extract their authentic positioning, crafting visual assets
+                        that communicate credibility from the very first impression.
+                    </p>
+                    <a href="contact.html"
+                        class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium btn-primary px-6 py-3">
+                        Inquire about Branding &rarr;
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/9] shadow-sm">
+                        <img src="Images/aura-living.jpg" alt="Branding & Identity System Case Example"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="bg-ff-canvas-soft/80 border border-ff-tertiary/20 p-6 md:p-8">
+                        <h3 class="text-xs uppercase tracking-widest text-ff-primary font-semibold mb-4">Core
+                            Deliverables</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-ff-ink/80 font-light">
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Brand Strategy &amp; Narrative Architecture</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Logo Suite (Primary, Wordmark, Circular Mark)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Editorial Typography &amp; Color Systems</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Brand Guidelines &amp; Token Architecture</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Stationery, Pitch Decks &amp; Collateral Suite</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Figma Design Token Kit &amp; Production Assets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rhythm Shift: Service 02: Web Design (Aubergine Section) -->
+        <section id="web-design"
+            class="bg-ff-primary text-ff-secondary py-24 md:py-32 px-6 md:px-10 scroll-mt-20 relative overflow-hidden bg-aubergine-grid">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    <div class="lg:col-span-5 order-2 lg:order-1 space-y-6">
+                        <div class="case-study-media border border-ff-secondary/20 aspect-[16/9] shadow-md">
+                            <img src="Images/smo-technova.jpg" alt="Web Design Case Study"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="bg-ff-aubergine-deep/60 border border-ff-secondary/15 p-6 md:p-8">
+                            <h3 class="text-xs uppercase tracking-widest text-ff-accent font-semibold mb-4">Core
+                                Deliverables</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-ff-secondary/80 font-light">
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Editorial UI/UX Wireframes &amp; Prototypes</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Responsive Layouts for Mobile &amp; Desktop</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>High-Performance Frontend Code</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Core Web Vitals &amp; Technical SEO Setup</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Conversion Funnels &amp; Inquiry Forms</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Asset Optimization &amp; Deployment Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <span class="text-xs uppercase tracking-widest text-ff-accent font-semibold block mb-3">Practice
+                            02 &bull; Digital Homes</span>
+                        <h2
+                            class="text-4xl md:text-5xl font-fraunces text-ff-secondary font-medium md:font-semibold leading-[1.1] mb-6">
+                            Web Design</h2>
+                        <p class="text-xl font-serif italic text-ff-secondary/95 mb-6 leading-snug">
+                            &ldquo;A home for your business online. Considered, editorial web design that reflects who
+                            you are &mdash; not another template that looks like everyone else's.&rdquo;
+                        </p>
+                        <p class="text-sm md:text-base text-ff-secondary/85 font-normal leading-relaxed mb-8">
+                            Most modern websites look like they were pulled from the same generic SaaS template. We
+                            build digital spaces that possess character, typographic discipline, and effortless
+                            elegance. Every interface is constructed for lightning speed, seamless responsiveness, and
+                            clear commercial conversion.
+                        </p>
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium btn-accent px-6 py-3">
+                            Inquire about Web Design &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 03: Digital Content (Ivory Section) -->
+        <section id="digital-content" class="py-24 md:py-32 px-6 md:px-10 max-w-7xl mx-auto scroll-mt-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <span class="text-xs uppercase tracking-widest text-ff-primary font-bold block mb-3">Practice 03
+                        &bull; Narrative</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-6">
+                        Digital Content</h2>
+                    <p class="text-xl font-serif italic text-ff-ink mb-6 leading-snug">
+                        &ldquo;Content that keeps you visible. From social to storytelling, we help founders show up
+                        consistently without losing their voice.&rdquo;
+                    </p>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-8">
+                        Founders are busy building companies. We eliminate content exhaustion by designing repeatable,
+                        high-fidelity content systems. We establish your editorial cadence, design graphic templates,
+                        and craft thought leadership that commands respect in your industry.
+                    </p>
+                    <a href="contact.html"
+                        class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium btn-primary px-6 py-3">
+                        Inquire about Digital Content &rarr;
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="case-study-media border border-ff-tertiary/20 aspect-[16/9] shadow-sm">
+                        <img src="Images/nexa-capital.jpg" alt="Digital Content & Narrative Systems"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <div class="bg-ff-canvas-soft/80 border border-ff-tertiary/20 p-6 md:p-8">
+                        <h3 class="text-xs uppercase tracking-widest text-ff-primary font-semibold mb-4">Core
+                            Deliverables</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-ff-ink/80 font-light">
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Founder Voice &amp; Editorial Style Guide</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Social Media Design Systems (LinkedIn &amp; X)</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Visual Essay &amp; Article Layout Templates</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Product Launch &amp; Announcement Assets</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Curated Editorial Newsletter Templates</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <span class="text-ff-accent font-serif">&bull;</span>
+                                <span>Multi-Format Export Asset Library</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 04: Book Publishing (Ivory / Canvas Soft Section) -->
+        <section id="book-publishing"
+            class="bg-ff-canvas-soft/70 py-24 md:py-32 px-6 md:px-10 border-y border-ff-tertiary/20 scroll-mt-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                    <div class="lg:col-span-5 order-2 lg:order-1 space-y-6">
+                        <div class="case-study-media border border-ff-tertiary/25 aspect-[16/9] shadow-sm">
+                            <img src="Images/founders-thesis-book.jpg"
+                                alt="Book Publishing and Cover Design Case Example" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="bg-ff-secondary border border-ff-tertiary/20 p-6 md:p-8">
+                            <h3 class="text-xs uppercase tracking-widest text-ff-primary font-semibold mb-4">Core
+                                Deliverables</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-ff-ink/80 font-light">
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Bespoke Cover Design (Hardcover, Paperback, Kindle)</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Professional Interior Typesetting &amp; Margins</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Full Amazon KDP Setup, Metadata &amp; ISBN</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>EPUB &amp; Print-Ready PDF Production</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>Author Landing Page &amp; Launch Promo Kit</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <span class="text-ff-accent font-serif">&bull;</span>
+                                    <span>3D Photorealistic Book Mockups for PR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 order-1 lg:order-2">
+                        <span class="text-xs uppercase tracking-widest text-ff-primary font-bold block mb-3">Practice 04
+                            &bull; Publishing</span>
+                        <h2
+                            class="text-4xl md:text-5xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1] mb-6">
+                            Book Publishing</h2>
+                        <p class="text-xl font-serif italic text-ff-ink mb-6 leading-snug">
+                            &ldquo;From manuscript to market. Formatting, cover design, and full Amazon publication
+                            support for founders turning expertise into a book.&rdquo;
+                        </p>
+                        <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed mb-8">
+                            A published book is the single most enduring artifact a founder can create. We guide authors
+                            seamlessly through the intimidating publishing pipeline: crafting an unforgettable jacket
+                            design, formatting interior typography with traditional bibliophile care, and managing the
+                            entire Amazon KDP setup for worldwide distribution.
+                        </p>
+                        <a href="contact.html"
+                            class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-medium btn-primary px-6 py-3">
+                            Inquire about Book Publishing &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Studio Process (Aubergine Section) -->
+        <section class="bg-ff-primary text-ff-secondary py-24 md:py-32 px-6 md:px-10 bg-aubergine-grid">
+            <div class="max-w-7xl mx-auto">
+                <div class="max-w-3xl mb-16">
+                    <span class="text-xs uppercase tracking-[0.14em] text-ff-secondary/80 font-semibold block mb-2">Our
+                        Methodology</span>
+                    <h2
+                        class="text-4xl md:text-5xl font-fraunces font-medium md:font-semibold leading-[1.08] mb-6 text-ff-secondary">
+                        How we work. Less noise, more <span class="italic text-ff-accent font-serif">form.</span>
+                    </h2>
+                    <p class="text-base md:text-lg text-ff-secondary/85 font-normal leading-relaxed">
+                        A transparent, founder-tested 4-step framework designed for momentum, clarity, and zero
+                        administrative bloat.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="border-t border-ff-secondary/20 pt-6">
+                        <span class="font-fraunces text-3xl text-ff-accent block mb-3">01</span>
+                        <h3 class="text-lg font-semibold text-ff-secondary mb-1.5">Extraction &amp; Discovery</h3>
+                        <p class="text-sm text-ff-secondary/85 font-normal leading-relaxed">
+                            We dig beneath the surface through an intensive founder interview to identify your real
+                            competitive edge and design narrative.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-ff-secondary/20 pt-6">
+                        <span class="font-fraunces text-3xl text-ff-accent block mb-3">02</span>
+                        <h3 class="text-lg font-semibold text-ff-secondary mb-1.5">Form &amp; Direction</h3>
+                        <p class="text-sm text-ff-secondary/85 font-normal leading-relaxed">
+                            We present clear visual and architectural directions. No 50-page moodboards &mdash; just
+                            concrete, high-conviction creative solutions.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-ff-secondary/20 pt-6">
+                        <span class="font-fraunces text-3xl text-ff-accent block mb-3">03</span>
+                        <h3 class="text-lg font-semibold text-ff-secondary mb-1.5">Refinement &amp; Build</h3>
+                        <p class="text-sm text-ff-secondary/85 font-normal leading-relaxed">
+                            Meticulous crafting of all identity assets, responsive frontend code, editorial layouts, or
+                            book typesetting with obsessive attention to detail.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-ff-secondary/20 pt-6">
+                        <span class="font-fraunces text-3xl text-ff-accent block mb-3">04</span>
+                        <h3 class="text-lg font-semibold text-ff-secondary mb-1.5">Launch &amp; Handover</h3>
+                        <p class="text-sm text-ff-secondary/85 font-normal leading-relaxed">
+                            Deployment, asset kits, documentation, and live handoff so you and your team have full
+                            autonomy moving forward.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Studio FAQ Section (Ivory) -->
+        <section class="py-24 md:py-32 px-6 md:px-10 max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="editorial-tag text-ff-accent block mb-2">Common Questions</span>
+                <h2
+                    class="text-4xl md:text-5xl font-fraunces text-ff-primary font-medium md:font-semibold leading-[1.1]">
+                    Answers for founders.</h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="border border-ff-tertiary/25 p-6 md:p-8 bg-ff-secondary">
+                    <h3 class="text-lg font-fraunces font-medium text-ff-primary mb-2">What is the typical timeline for
+                        a branding or web project?</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        A focused brand identity or editorial web project typically spans 3 to 6 weeks. Complete
+                        multi-discipline engagements (Branding + Custom Web Design) generally run 6 to 8 weeks. We work
+                        in disciplined sprints to maintain velocity.
+                    </p>
+                </div>
+
+                <div class="border border-ff-tertiary/25 p-6 md:p-8 bg-ff-secondary">
+                    <h3 class="text-lg font-fraunces font-medium text-ff-primary mb-2">How do you work with founders
+                        located in different time zones?</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Our studio is rooted in Nigeria with a seamless remote workflow. We collaborate with founders
+                        across the UK, Europe, North America, and Africa using asynchronous updates, Loom video
+                        walkthroughs, and scheduled milestone alignment calls.
+                    </p>
+                </div>
+
+                <div class="border border-ff-tertiary/25 p-6 md:p-8 bg-ff-secondary">
+                    <h3 class="text-lg font-fraunces font-medium text-ff-primary mb-2">Do I own all the final files and
+                        intellectual property?</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Yes, 100%. Upon final project completion and handover, you retain full ownership of all vector
+                        files, source code, typography licenses advice, publication files, and master assets.
+                    </p>
+                </div>
+
+                <div class="border border-ff-tertiary/25 p-6 md:p-8 bg-ff-secondary">
+                    <h3 class="text-lg font-fraunces font-medium text-ff-primary mb-2">What if I need ongoing design and
+                        digital content support?</h3>
+                    <p class="text-sm md:text-base text-ff-ink/75 font-light leading-relaxed">
+                        Following an initial branding or web project, we offer selective studio advisory retainers for
+                        founders who want ongoing editorial content and design direction.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full-Bleed Call to Action -->
+        <section class="bg-ff-primary text-ff-secondary py-20 px-6 md:px-10 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2
+                    class="text-3xl sm:text-4xl md:text-5xl font-fraunces font-medium md:font-semibold leading-[1.08] mb-6 text-ff-secondary">
+                    Ready to begin your project?
+                </h2>
+                <p class="text-sm md:text-base text-ff-secondary/85 font-normal mb-8 max-w-xl mx-auto leading-relaxed">
+                    Tell us about your brand goals, web requirements, or publishing vision. We'll tailor a clear
+                    proposal.
+                </p>
+                <a href="contact.html"
+                    class="px-8 py-4 text-xs md:text-sm font-medium uppercase tracking-widest btn-accent inline-block">
+                    Start a conversation &rarr;
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Studio Footer -->
+    <footer class="bg-ff-secondary text-ff-ink border-t border-ff-tertiary/30 pt-20 pb-12 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-ff-tertiary/20">
+                <!-- Studio Wordmark & Summary -->
+                <div class="md:col-span-5 space-y-6">
+                    <a href="index.html" class="inline-block focus:outline-none">
+                        <img src="Images/F & F Logo.png" alt="Form & Founder Logo" class="h-12 w-auto object-contain">
+                    </a>
+                    <p class="text-base text-ff-primary font-light leading-relaxed max-w-sm">
+                        A creative studio for founders and growing businesses. Crafting brand identity systems, bespoke
+                        editorial websites, digital narratives, and turnkey book publishing.
+                    </p>
+                    <div class="text-xs text-ff-ink/60 font-mono">
+                        LOCATION: ILORIN &bull; LAGOS &bull; GLOBAL REMOTE
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-3 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Navigation</span>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Home</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-ff-ink/75 hover:text-ff-accent transition-colors">Services</a></li>
+                        <li><a href="work.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Work &amp;
+                                Case Studies</a></li>
+                        <li><a href="about.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">About the
+                                Studio</a></li>
+                        <li><a href="contact.html" class="text-ff-ink/75 hover:text-ff-accent transition-colors">Contact
+                                / Inquiries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services List -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Practices</span>
+                    <ul class="space-y-2.5 text-sm text-ff-ink/75">
+                        <li><a href="services.html#branding" class="hover:text-ff-accent transition-colors">Branding</a>
+                        </li>
+                        <li><a href="services.html#web-design" class="hover:text-ff-accent transition-colors">Web
+                                Design</a></li>
+                        <li><a href="services.html#digital-content"
+                                class="hover:text-ff-accent transition-colors">Digital Content</a></li>
+                        <li><a href="services.html#book-publishing" class="hover:text-ff-accent transition-colors">Book
+                                Publishing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Inquiries -->
+                <div class="md:col-span-2 space-y-4">
+                    <span class="editorial-tag text-ff-primary block font-semibold">Inquiries</span>
+                    <p class="text-sm text-ff-ink/70 leading-relaxed">
+                        Ready to start a conversation about your next project?
+                    </p>
+                    <a href="mailto:hello@formandfounder.com"
+                        class="text-sm md:text-xs font-medium text-ff-accent hover:underline block break-all">
+                        hello@formandfounder.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Subfooter -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ff-ink/60 gap-4">
+                <div>
+                    &copy; 2026 F&amp;F (Form &amp; Founder). All rights reserved.
+                </div>
+                <div class="font-serif italic text-ff-primary">
+                    Where ideas take form.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
